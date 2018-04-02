@@ -7,7 +7,7 @@
 # This script ensures the documentation is up-to-date and also removes
 # unnecessary files.
 
-stopifnot(file.exists("workflowr.Rproj"))
+stopifnot(file.exists("workflowrBeta.Rproj"))
 
 devtools::document()
 devtools::clean_vignettes(); devtools::build_vignettes(); devtools::clean_vignettes()

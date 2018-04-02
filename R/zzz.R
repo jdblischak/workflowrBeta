@@ -2,7 +2,7 @@
 # .onAttach & zzz.R explained: http://r-pkgs.had.co.nz/r.html#r-differences
 
 .onAttach <- function(libname, pkgname) {
-  m <- c(sprintf("This is workflowr version %s",
+  m <- c(sprintf("This is workflowr version %s (i.e. workflowrBeta)",
                  utils::packageVersion("workflowr")),
          "Run ?workflowr for help getting started")
   packageStartupMessage(paste(m, collapse = "\n"))
@@ -17,7 +17,7 @@
 #'
 #'   Run \code{browseVignettes("workflowr")} to read the package vignettes
 #'   locally. Alternatively you can read the documentation online at
-#'   \url{https://jdblischak.github.io/workflowr}.
+#'   \url{https://jdblischak.github.io/workflowrBeta}.
 #'
 #' @section Main workflowr functions:
 #'

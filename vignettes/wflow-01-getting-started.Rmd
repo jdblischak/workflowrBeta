@@ -27,7 +27,7 @@ if (is.null(git_config$user.name) || is.null(git_config$user.email)) {
   warning(workflowr:::wrap(
     "Because you do not have Git configured on this machine, none of the code
     below was executed. Please refer to the online documentation to see the
-    output: https://jdblischak.github.io/workflowr/"))
+    output: https://jdblischak.github.io/workflowrBeta/"))
 }
 rm(git_config)
 # If ~/.git exists, set eval=FALSE
@@ -38,7 +38,7 @@ if (dir.exists(home_git)) {
   warning(workflowr:::wrap(
     "Because you have a Git repository in your home directory, none of the
     code below was executed. Please refer to the online documentation to see
-    the output: https://jdblischak.github.io/workflowr/ \n\nYou should
+    the output: https://jdblischak.github.io/workflowrBeta/ \n\nYou should
     consider removing the directory since it was likely created in error: ",
     home_git))
 }
@@ -63,7 +63,7 @@ like [this][demo01].
 [demo01]: https://jdblischak.github.io/workflowr-demo01/
 
 This tutorial assumes you have already followed the "Quick start" instructions
-in the [README](https://jdblischak.github.io/workflowr/index.html).
+in the [README](https://jdblischak.github.io/workflowrBeta/index.html).
 Specifically, you need to have R, pandoc (or RStudio), and workflowr installed
 on your computer. Furthermore, you need a GitHub account.
 

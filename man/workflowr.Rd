@@ -14,7 +14,7 @@ and Git.
 
   Run \code{browseVignettes("workflowr")} to read the package vignettes
   locally. Alternatively you can read the documentation online at
-  \url{https://jdblischak.github.io/workflowr}.
+  \url{https://jdblischak.github.io/workflowrBeta}.
 }
 
 \section{Main workflowr functions}{

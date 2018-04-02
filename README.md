@@ -1,9 +1,16 @@
-# workflowr: organized + reproducible + shareable data science in R
+# workflowrBeta
 
-[![Travis-CI Build Status](https://travis-ci.org/jdblischak/workflowr.svg?branch=master)](https://travis-ci.org/jdblischak/workflowr)
-[![codecov](https://codecov.io/gh/jdblischak/workflowr/branch/master/graph/badge.svg)](https://codecov.io/gh/jdblischak/workflowr)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/jdblischak/workflowr?branch=master&svg=true)](https://ci.appveyor.com/project/jdblischak/workflowr)
-[![CRAN status](https://www.r-pkg.org/badges/version/workflowr)](https://cran.r-project.org/package=workflowr)
+[![Travis-CI Build Status](https://travis-ci.org/jdblischak/workflowrBeta.svg?branch=master)](https://travis-ci.org/jdblischak/workflowrBeta)
+[![codecov](https://codecov.io/gh/jdblischak/workflowrBeta/branch/master/graph/badge.svg)](https://codecov.io/gh/jdblischak/workflowrBeta)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/jdblischak/workflowrBeta?branch=master&svg=true)](https://ci.appveyor.com/project/jdblischak/workflowrBeta)
+[![CRAN status](https://www.r-pkg.org/badges/version/workflowrBeta)](https://cran.r-project.org/package=workflowrBeta)
+
+**NOTE: This is workflowrBeta. This package should only be used by early
+adopters of workflowr that do not want to migrate their existing projects. If
+you are starting a new project, please use the latest [workflowr
+release](https://github.com/jdblischak/workflowr). All feature development and
+other improvements will happen there. In contrast, workflowrBeta will only
+receive bug fixes.**
 
 The [workflowr][] R package makes it easier for researchers to
 organize their projects and share their results with colleagues. 
@@ -12,7 +19,7 @@ Install the latest release (v0.11.0) by running this command in R or
 RStudio:
 
 ```r
-devtools::install_github("jdblischak/workflowr", build_vignettes = TRUE)
+devtools::install_github("jdblischak/workflowrBeta", build_vignettes = TRUE)
 ```
 
 If you are already writing R code to analyze data, and know the basics
@@ -96,7 +103,7 @@ operations, which you are unlikely to need at the beginning of your project.
     # If you receive an error on macOS or Windows, try specifying type = "binary"
     #install_version("git2r", "0.21.0", type = "binary")
     # Install workflowr from GitHub
-    install_github("jdblischak/workflowr", build_vignettes = TRUE)
+    install_github("jdblischak/workflowrBeta", build_vignettes = TRUE)
     ```
 
 1. Work through the vignette,
@@ -119,25 +126,12 @@ obtain by running `packageVersion("workflowr")`).
 
 ## Upgrading
 
-To upgrade workflowr to the most recent stable release, follow these steps:
+To upgrade workflowrBeta to incorporate the latest bug fixes, follow these steps:
 
 * Re-install from [GitHub][gh] with [devtools][]:
 
 ```r
-devtools::install_github("jdblischak/workflowr", build_vignettes = TRUE)
-```
-
-* Preview potential changes to your project files with `wflow_update()`:
-
-```r
-library("workflowr")
-wflow_update()
-```
-
-* To implement these changes, set `dry_run = FALSE`:
-
-```r
-wflow_update(dry_run = FALSE)
+devtools::install_github("jdblischak/workflowrBeta", build_vignettes = TRUE)
 ```
 
 ## More about this repository
@@ -298,8 +292,8 @@ the lowercase workflowr should be the preferred option.
 [bookdown]: https://github.com/rstudio/bookdown
 [cboettig/template]: https://github.com/cboettig/template
 [Codecov]: https://codecov.io/
-[contributing]: https://github.com/jdblischak/workflowr/blob/master/CONTRIBUTING.md
-[contributors]: https://github.com/jdblischak/workflowr/graphs/contributors
+[contributing]: https://github.com/jdblischak/workflowrBeta/blob/master/CONTRIBUTING.md
+[contributors]: https://github.com/jdblischak/workflowrBeta/graphs/contributors
 [covr]: https://github.com/jimhester/covr
 [cran-rr]: https://cran.r-project.org/web/views/ReproducibleResearch.html
 [demo01]: https://jdblischak.github.io/workflowr-demo01/
@@ -313,7 +307,7 @@ the lowercase workflowr should be the preferred option.
 [GitHub Pages]: https://pages.github.com/
 [hadley]: http://hadley.nz/
 [htmlwidgets]: http://www.htmlwidgets.org/
-[issues]: https://github.com/jdblischak/workflowr/issues
+[issues]: https://github.com/jdblischak/workflowrBeta/issues
 [knitr]: https://github.com/yihui/knitr
 [knitr-jekyll]: https://github.com/yihui/knitr-jekyll
 [knowledge-repo]: https://github.com/airbnb/knowledge-repo
@@ -360,10 +354,10 @@ the lowercase workflowr should be the preferred option.
 [testthat]: https://github.com/hadley/testthat
 [travis]: https://travis-ci.org/
 [uchicago]: http://www.uchicago.edu/
-[vig-custom]: https://jdblischak.github.io/workflowr/articles/wflow-02-customization.html
-[vig-details]: https://jdblischak.github.io/workflowr/articles/wflow-04-how-it-works.html
-[vig-migrating]: https://jdblischak.github.io/workflowr/articles/wflow-03-migrating.html
-[vig-start]: https://jdblischak.github.io/workflowr/articles/wflow-01-getting-started.html
-[workflowr]: https://jdblischak.github.io/workflowr/
+[vig-custom]: https://jdblischak.github.io/workflowrBeta/articles/wflow-02-customization.html
+[vig-details]: https://jdblischak.github.io/workflowrBeta/articles/wflow-04-how-it-works.html
+[vig-migrating]: https://jdblischak.github.io/workflowrBeta/articles/wflow-03-migrating.html
+[vig-start]: https://jdblischak.github.io/workflowrBeta/articles/wflow-01-getting-started.html
+[workflowr]: https://jdblischak.github.io/workflowrBeta/
 [xiangzhu]: https://github.com/xiangzhu
 [zoon]: https://github.com/zoonproject/zoon
