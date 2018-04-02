@@ -1,3 +1,11 @@
+# workflowr 0.12.0
+
+Create separate repository [workflowrBeta][] for early adopters to continue
+using beta version of workflowr for existing projects. New users are encouraged
+to the latest [workflowr release](https://github.com/jdblischak/workflowr).
+
+[workflowrBeta]: https://github.com/jdblischak/workflowrBeta
+
 # workflowr 0.11.0
 
 * `wflow_publish()` now views the website by default if run interactively (`view

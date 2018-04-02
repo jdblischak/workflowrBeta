@@ -49,7 +49,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/jdblischak/workflowr">
+  <a href="https://github.com/jdblischak/workflowrBeta">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -65,15 +65,16 @@
       
       </header><div class="row">
   <div class="contents col-md-9">
-    <div id="workflowr-organized-reproducible-shareable-data-science-in-r" class="section level1">
+    <div id="workflowrbeta" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#workflowr-organized-reproducible-shareable-data-science-in-r" class="anchor"></a>workflowr: organized + reproducible + shareable data science in R</h1></div>
+<a href="#workflowrbeta" class="anchor"></a>workflowrBeta</h1></div>
 
-<p>The <a href="https://jdblischak.github.io/workflowr/">workflowr</a> R package makes it easier for researchers to organize their projects and share their results with colleagues.</p>
-<p>Install the latest release (v0.11.0) by running this command in R or RStudio:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"jdblischak/workflowr"</span>, <span class="dt">build_vignettes =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><strong>NOTE: This is workflowrBeta. This package should only be used by early adopters of workflowr that do not want to migrate their existing projects. If you are starting a new project, please use the latest <a href="https://github.com/jdblischak/workflowr">workflowr release</a>. All feature development and other improvements will happen there. In contrast, workflowrBeta will only receive bug fixes.</strong></p>
+<p>The <a href="https://jdblischak.github.io/workflowrBeta/">workflowr</a> R package makes it easier for researchers to organize their projects and share their results with colleagues.</p>
+<p>Install the latest release (v0.12.0) by running this command in R or RStudio:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"jdblischak/workflowrBeta"</span>, <span class="dt">build_vignettes =</span> <span class="ot">TRUE</span>)</code></pre></div>
 <p>If you are already writing R code to analyze data, and know the basics of Git and GitHub, you can start taking advantage of workflowr immediately. In a matter of minutes, you can create a research website like <a href="https://jdblischak.github.io/workflowr-demo01/">this</a>. (See also the <a href="https://stephenslab.github.io/wflow-divvy/">Divvy data exploration project</a> for a more elaborate example of a workflowr project.)</p>
-<p>If you find any problems, or would like to suggest new features, please open an <a href="https://github.com/jdblischak/workflowr/issues">Issue</a>.</p>
+<p>If you find any problems, or would like to suggest new features, please open an <a href="https://github.com/jdblischak/workflowrBeta/issues">Issue</a>.</p>
 <ul>
 <li><a href="#why-use-workflowr">Why use workflowr?</a></li>
 <li><a href="#quick-start">Quick start</a></li>
@@ -111,7 +112,7 @@
 <li><p><strong>(Optional)</strong> Install <a href="https://git-scm.com/">Git</a> (<a href="https://swcarpentry.github.io/workshop-template/#git">instructions</a> from <a href="https://software-carpentry.org">Software Carpentry</a>). You do <strong>not</strong> need to install Git to start using workflowr. You only need to install Git if you want to perform more advanced Git operations, which you are unlikely to need at the beginning of your project.</p></li>
 <li><p>Create an account on <a href="https://github.com">GitHub</a>.</p></li>
 <li>
-<p>Install the latest stable release of <a href="https://jdblischak.github.io/workflowr/">workflowr</a> from <a href="https://github.com">GitHub</a> using <a href="https://github.com/hadley/devtools">devtools</a>:</p>
+<p>Install the latest stable release of <a href="https://jdblischak.github.io/workflowrBeta/">workflowr</a> from <a href="https://github.com">GitHub</a> using <a href="https://github.com/hadley/devtools">devtools</a>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Devtools must be installed first</span>
 <span class="co">#install.packages("devtools")</span>
 <span class="kw">library</span>(<span class="st">"devtools"</span>)
@@ -120,31 +121,22 @@
 <span class="co"># If you receive an error on macOS or Windows, try specifying type = "binary"</span>
 <span class="co">#install_version("git2r", "0.21.0", type = "binary")</span>
 <span class="co"># Install workflowr from GitHub</span>
-<span class="kw">install_github</span>(<span class="st">"jdblischak/workflowr"</span>, <span class="dt">build_vignettes =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<span class="kw">install_github</span>(<span class="st">"jdblischak/workflowrBeta"</span>, <span class="dt">build_vignettes =</span> <span class="ot">TRUE</span>)</code></pre></div>
 </li>
-<li><p>Work through the vignette, <a href="https://jdblischak.github.io/workflowr/articles/wflow-01-getting-started.html">“Getting started with workflowr”</a>, to learn how to set up a workflowr project. (You can view all the available vignettes locally with <code>browseVignettes("workflowr")</code>.)</p></li>
-<li><p>Alternatively, if you have already started your project, read the vignette <a href="https://jdblischak.github.io/workflowr/articles/wflow-03-migrating.html">“Migrating an existing project to use workflowr”</a> to learn how to convert your project to a workflowr project.</p></li>
-<li><p>Learn more about how to <a href="https://jdblischak.github.io/workflowr/articles/wflow-02-customization.html">Customize your research website</a>.</p></li>
-<li><p>If you find any unexpected behavior or think of an additional feature that would be nice to have, please open an Issue <a href="https://github.com/jdblischak/workflowr/issues">here</a>. When writing your bug report or feature request, please note the version of workflowr you are using (which you can obtain by running <code>packageVersion("workflowr")</code>).</p></li>
+<li><p>Work through the vignette, <a href="https://jdblischak.github.io/workflowrBeta/articles/wflow-01-getting-started.html">“Getting started with workflowr”</a>, to learn how to set up a workflowr project. (You can view all the available vignettes locally with <code>browseVignettes("workflowr")</code>.)</p></li>
+<li><p>Alternatively, if you have already started your project, read the vignette <a href="https://jdblischak.github.io/workflowrBeta/articles/wflow-03-migrating.html">“Migrating an existing project to use workflowr”</a> to learn how to convert your project to a workflowr project.</p></li>
+<li><p>Learn more about how to <a href="https://jdblischak.github.io/workflowrBeta/articles/wflow-02-customization.html">Customize your research website</a>.</p></li>
+<li><p>If you find any unexpected behavior or think of an additional feature that would be nice to have, please open an Issue <a href="https://github.com/jdblischak/workflowrBeta/issues">here</a>. When writing your bug report or feature request, please note the version of workflowr you are using (which you can obtain by running <code>packageVersion("workflowr")</code>).</p></li>
 </ol>
 </div>
 <div id="upgrading" class="section level2">
 <h2 class="hasAnchor">
 <a href="#upgrading" class="anchor"></a>Upgrading</h2>
-<p>To upgrade workflowr to the most recent stable release, follow these steps:</p>
+<p>To upgrade workflowrBeta to incorporate the latest bug fixes, follow these steps:</p>
 <ul>
 <li>Re-install from <a href="https://github.com">GitHub</a> with <a href="https://github.com/hadley/devtools">devtools</a>:</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"jdblischak/workflowr"</span>, <span class="dt">build_vignettes =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<ul>
-<li>Preview potential changes to your project files with <code><a href="reference/wflow_update.html">wflow_update()</a></code>:</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">"workflowr"</span>)
-<span class="kw"><a href="reference/wflow_update.html">wflow_update</a></span>()</code></pre></div>
-<ul>
-<li>To implement these changes, set <code>dry_run = FALSE</code>:</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/wflow_update.html">wflow_update</a></span>(<span class="dt">dry_run =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"jdblischak/workflowrBeta"</span>, <span class="dt">build_vignettes =</span> <span class="ot">TRUE</span>)</code></pre></div>
 </div>
 <div id="more-about-this-repository" class="section level2">
 <h2 class="hasAnchor">
@@ -152,7 +144,7 @@
 <p>This repository contains the workflowr R package. If your goal is to create a workflowr project, you do <strong>not</strong> need to fork this repository. Instead, follow the <a href="#quick-start">Quick start</a> instructions above.</p>
 <p>For the most part, I try to follow the guidelines from <a href="http://r-pkgs.had.co.nz/">R packages</a> by <a href="http://hadley.nz/">Hadley Wickham</a>. The unit tests are performed with <a href="https://github.com/hadley/testthat">testthat</a>, the documentation is built with <a href="https://github.com/klutometis/roxygen">roxygen2</a>, the online package documentation is created with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>, continuous integration testing is performed for Linux and macOS by <a href="https://travis-ci.org/">Travis CI</a> and for Windows by <a href="https://ci.appveyor.com">AppVeyor</a>, and code coverage is calculated with <a href="https://github.com/jimhester/covr">covr</a> and <a href="https://codecov.io/">Codecov</a>.</p>
 <p>The template files used by <code><a href="reference/wflow_start.html">wflow_start()</a></code> to populate a new project are located in <code>inst/infrastructure/</code>. The R Markdown templates used by <code><a href="reference/wflow_open.html">wflow_open()</a></code> are located in <code>inst/rmarkdown/templates/</code>. The <a href="https://rstudio.github.io/rstudio-extensions/rstudio_project_templates.html">RStudio project template</a> is configured by <code>inst/rstudio/templates/project/wflow_start.dcf</code>. The repository contains the files <code>LICENSE</code> and <code>LICENSE.md</code> to both adhere to <a href="https://cran.r-project.org/doc/manuals/R-exts.html#Licensing">R package conventions for defining the license</a> and also to make the license clear in a more conventional manner (suggestions for improvement welcome). <code>document.R</code> is a convenience script for regenerating the documentation. <code>build.sh</code> is a convenience script for running <code>R CMD check</code>. The remaining directories are standard for R packages as described in the manual <a href="https://cran.r-project.org/doc/manuals/R-exts.html">Writing R Extensions</a>.</p>
-<p>If you are interested in contributing to this project, please see these <a href="https://github.com/jdblischak/workflowr/blob/master/CONTRIBUTING.md">instructions</a>.</p>
+<p>If you are interested in contributing to this project, please see these <a href="https://github.com/jdblischak/workflowrBeta/blob/master/CONTRIBUTING.md">instructions</a>.</p>
 </div>
 <div id="background-and-related-work" class="section level2">
 <h2 class="hasAnchor">
@@ -225,8 +217,8 @@
 <h2 class="hasAnchor">
 <a href="#credits" class="anchor"></a>Credits</h2>
 <p>Workflowr was developed, and is maintained, by John Blischak, a postdoctoral researcher in the laboratory of <a href="http://stephenslab.uchicago.edu/">Matthew Stephens</a> at <a href="http://www.uchicago.edu/">The University of Chicago</a>. He is funded by a grant from the <a href="https://www.moore.org/">Gordon and Betty Moore Foundation</a> to MS. <a href="https://pcarbo.github.io/">Peter Carbonetto</a> and <a href="http://stephenslab.uchicago.edu/">Matthew Stephens</a> are co-authors.</p>
-<p>We are very thankful to workflowr <a href="https://github.com/jdblischak/workflowr/graphs/contributors">contributors</a> for helping improve the package. We are also grateful for workflowr users for testing the package and providing feedback—thanks especially to <a href="https://github.com/LSun">Lei Sun</a>, <a href="https://github.com/xiangzhu">Xiang Zhu</a>, <a href="https://github.com/NKweiwang">Wei Wang</a>, and other members (past and present) of the Stephens lab.</p>
-<p>The workflowr package uses many great open source packages. Especially critical for this project are the R packages <a href="https://cran.r-project.org/web/packages/git2r/index.html">git2r</a>, <a href="https://github.com/yihui/knitr">knitr</a>, and <a href="http://rmarkdown.rstudio.com/">rmarkdown</a>. Please see the vignette <a href="https://jdblischak.github.io/workflowr/articles/wflow-04-how-it-works.html">How the workflowr package works</a> to learn about the software that makes workflowr possible.</p>
+<p>We are very thankful to workflowr <a href="https://github.com/jdblischak/workflowrBeta/graphs/contributors">contributors</a> for helping improve the package. We are also grateful for workflowr users for testing the package and providing feedback—thanks especially to <a href="https://github.com/LSun">Lei Sun</a>, <a href="https://github.com/xiangzhu">Xiang Zhu</a>, <a href="https://github.com/NKweiwang">Wei Wang</a>, and other members (past and present) of the Stephens lab.</p>
+<p>The workflowr package uses many great open source packages. Especially critical for this project are the R packages <a href="https://cran.r-project.org/web/packages/git2r/index.html">git2r</a>, <a href="https://github.com/yihui/knitr">knitr</a>, and <a href="http://rmarkdown.rstudio.com/">rmarkdown</a>. Please see the vignette <a href="https://jdblischak.github.io/workflowrBeta/articles/wflow-04-how-it-works.html">How the workflowr package works</a> to learn about the software that makes workflowr possible.</p>
 </div>
 <div id="license" class="section level2">
 <h2 class="hasAnchor">
@@ -237,12 +229,12 @@
 <h2 class="hasAnchor">
 <a href="#citation" class="anchor"></a>Citation</h2>
 <p>To cite workflowr in publications use:</p>
-<p>John D. Blischak, Peter Carbonetto and Matthew Stephens (2017). The workflowr R package: a framework for reproducible and collaborative data science. R package version 0.11.0. <a href="https://github.com/jdblischak/workflowr" class="uri">https://github.com/jdblischak/workflowr</a></p>
+<p>John D. Blischak, Peter Carbonetto and Matthew Stephens (2017). The workflowr R package: a framework for reproducible and collaborative data science. R package version 0.12.0. <a href="https://github.com/jdblischak/workflowr" class="uri">https://github.com/jdblischak/workflowr</a></p>
 <p>A BibTeX entry for LaTeX users is</p>
 <pre><code>  @Manual{,
     title = {The workflowr R package: a framework for reproducible and collaborative data science},
     author = {John D. Blischak and Peter Carbonetto and Matthew Stephens},
-    note = {R package version 0.11.0},
+    note = {R package version 0.12.0},
     year = {2017},
     url = {https://github.com/jdblischak/workflowr},
   }</code></pre>
@@ -259,9 +251,9 @@
   <div class="col-md-3" id="sidebar">
     <h2>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/jdblischak/workflowr">https://​github.com/​jdblischak/​workflowr</a>
+<li>Browse source code at <br><a href="https://github.com/jdblischak/workflowrBeta">https://​github.com/​jdblischak/​workflowrBeta</a>
 </li>
-<li>Report a bug at <br><a href="https://github.com/jdblischak/workflowr/issues">https://​github.com/​jdblischak/​workflowr/​issues</a>
+<li>Report a bug at <br><a href="https://github.com/jdblischak/workflowrBeta/issues">https://​github.com/​jdblischak/​workflowrBeta/​issues</a>
 </li>
 </ul>
 <h2>License</h2>
@@ -274,10 +266,10 @@
 </ul>
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://travis-ci.org/jdblischak/workflowr"><img src="https://travis-ci.org/jdblischak/workflowr.svg?branch=master" alt="Travis-CI Build Status"></a></li>
-<li><a href="https://codecov.io/gh/jdblischak/workflowr"><img src="https://codecov.io/gh/jdblischak/workflowr/branch/master/graph/badge.svg" alt="codecov"></a></li>
-<li><a href="https://ci.appveyor.com/project/jdblischak/workflowr"><img src="https://ci.appveyor.com/api/projects/status/github/jdblischak/workflowr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
-<li><a href="https://cran.r-project.org/package=workflowr"><img src="https://www.r-pkg.org/badges/version/workflowr" alt="CRAN status"></a></li>
+<li><a href="https://travis-ci.org/jdblischak/workflowrBeta"><img src="https://travis-ci.org/jdblischak/workflowrBeta.svg?branch=master" alt="Travis-CI Build Status"></a></li>
+<li><a href="https://codecov.io/gh/jdblischak/workflowrBeta"><img src="https://codecov.io/gh/jdblischak/workflowrBeta/branch/master/graph/badge.svg" alt="codecov"></a></li>
+<li><a href="https://ci.appveyor.com/project/jdblischak/workflowrBeta"><img src="https://ci.appveyor.com/api/projects/status/github/jdblischak/workflowrBeta?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
+<li><a href="https://cran.r-project.org/package=workflowrBeta"><img src="https://www.r-pkg.org/badges/version/workflowrBeta" alt="CRAN status"></a></li>
 </ul>
 </div>
 </div>
